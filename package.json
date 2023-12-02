@@ -1,0 +1,24 @@
+{
+  "name": "chefe-em-casa",
+  "version": "1.0.0",
+  "description": "projeto novo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaime-junio/chefe-em-casa.git"
+  },
+  "author": "jaime-junio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaime-junio/chefe-em-casa/issues"
+  },
+  "homepage": "https://github.com/Jaime-junio/chefe-em-casa#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7"
+  }
+}
