@@ -29,7 +29,7 @@ function isActivepage($currentPage,$pageName){
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Chef em Casa</a>
+    <img src="./src/img/logo.jpg" alt="logo" width="100px" style="border-radius: 50%;">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

@@ -4,7 +4,7 @@ function conectDatabase(){
     $server = 'localhost';
     $user = 'root';
     $password = '';
-    $database = 'mew_bank';
+    $database = 'new_bank';
 
     $conection = mysqli_connect($server,$user,$password,$database);
 
@@ -15,7 +15,7 @@ function conectDatabase(){
 }
 //conectDatabase();
 
-if($_SERVER["REQUEST_METHOD"] == "post"){
+if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = $_POST["name"];
     $email = $_POST["email"];
     $password = $_POST["password"];

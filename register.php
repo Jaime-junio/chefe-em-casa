@@ -12,7 +12,7 @@
             Junte-se a mais nova comunidade de culinária do mundo!
         </p>
     </div>
-    <form action="register_post.php" method="$_POST">
+    <form action="register_post.php" method="post">
         <div class="form-group">
             <label for="name">Digite seu nome</label>
             <input type="text" name="name" id="name" class="form-control" required>
