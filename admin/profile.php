@@ -6,41 +6,7 @@ $pageInfo = array(
 );
 
 include_once('../components/admin/header.php');
-
-$user_id = $_SESSION['user_id'];
-
-
-$query = "SELECT * FROM users WHERE id = '$user_id'";
-
-
-$result = mysqli_query($connection,$query);
-
-
-$user_id = $_SESSION['user_id'];
-
-$stmt = mysqli_stmt_init($connection);
-
-if (mysqli_stmt_prepare($stmt, "SELECT * FROM users WHERE id = ?")) {
-    mysqli_stmt_bind_param($stmt, "i", $user_id);
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
-} else {
-    
-}
-
-if ($row = mysqli_fetch_assoc($result)) {
-    $name = $row['name'];
-    $email = $row['email'];
-    $image = $row['image'];
-    $about = $row['about'];
-
-    
-} else {
-   
-}
-
 ?>
-
 
 <!-- Conteúdo da página de perfil -->
 <main class="container py-5">
@@ -49,30 +15,31 @@ if ($row = mysqli_fetch_assoc($result)) {
         <section class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                <?php echo "<img src='" . $row['image'] . "' alt='Foto de Perfil' class='img-fluid mb-3'>"; ?>
+                    <img src="https://media.licdn.com/dms/image/D4D03AQGdVJQdQIFHrA/profile-displayphoto-shrink_800_800/0/1697559933642?e=1707955200&v=beta&t=B_cR2QTCfdLhFUoscHZ5LmXjJtegIUQXXV-hNZdzS7c"
+                        alt="Foto de Perfil" class="img-fluid mb-3">
                     <h5>
-                       <?php echo $name; ?>
+                        Matheus Teixeira
                     </h5>
                     <p>
-                        <?php echo $about;  ?>
+                        Desenvolvedor Web
                     </p>
-                    <p> <?php echo $email;  ?></p>
+                    <p>Email: contato.matheusteixeira@gmail.com</p>
                 </div>
             </div>
             <div class="card mt-3">
                 <div class="card-body">
-                    <form action="request/atualizar_perfil.php" method="post" enctype="multipart/form-data">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="image">Foto de Perfil</label>
-                            <input type="file" class="form-control-file" id="image" name="image">
+                            <input type="file" class="form-control-file" id="image">
                         </div>
                         <div class="form-group">
                             <label for="name">Nome</label>
-                            <input type="text" class="form-control" id="name" value="<?php $nome ?>" name="name">
+                            <input type="text" class="form-control" id="name" value="<?php $nome ?>">
                         </div>
                         <div class="form-group">
                             <label for="about">Sobre</label>
-                            <textarea class="form-control" id="about" name="about" rows="3"> <?php $about ?></textarea>
+                            <textarea class="form-control" id="about" rows="3">Desenvolvedor Web</textarea>
                         </div>
                         <div class="form-group">
                             <label for="email">Endereço de Email</label>
